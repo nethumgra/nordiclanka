@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nordic Lanka | Mobile Cleaning Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nordic: {
+                            blue: '#1E40AF',
+                            light: '#EFF6FF'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Navigation -->
+    <nav id="navbar" class="bg-transparent text-white fixed w-full z-50 transition-colors duration-300">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">Nordic Lanka</a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link hover:text-blue-300 transition">Home</a>
+                <a href="#about" class="nav-link hover:text-blue-300 transition">About</a>
+                <a href="#services" class="nav-link hover:text-blue-300 transition">Services</a>
+                <a href="#gallery" class="nav-link hover:text-blue-300 transition">Gallery</a>
+                <a href="#pricing" class="nav-link hover:text-blue-300 transition">Pricing</a>
+                <a href="#team" class="nav-link hover:text-blue-300 transition">Team</a>
+                <a href="#contact" class="nav-link hover:text-blue-300 transition">Contact</a>
+            </div>
+            
+            <!-- Mobile Navigation Button -->
+            <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden bg-blue-900 hidden">
+            <div class="px-4 py-2 space-y-3">
+                <a href="#home" class="nav-link block hover:bg-blue-800 px-3 py-2 rounded">Home</a>
+                <a href="#about" class="nav-link block hover:bg-blue-800 px-3 py-2 rounded">About</a>
+                <a href="#services" class="nav-link block hover:bg-blue-800 px-3 py-2 rounded">Services</a>
+                <a href="#gallery" class="nav-link block hover:bg-blue-800 px-3 py-2 rounded">Gallery</a>
+                <a href="#pricing" class="nav-link block hover:bg-blue-800 px-3 py-2 rounded">Pricing</a>
+                <a href="#team" class="nav-link block hover:bg-blue-800 px-3 py-2 rounded">Team</a>
+                <a href="#contact" class="nav-link block hover:bg-blue-800 px-3 py-2 rounded">Contact</a>
+            </div>
+        </div>
+    </nav>
+<!-- Hero Section with Slider and Overlay -->
+<section id="home" class="relative h-screen overflow-hidden">
+    <div class="absolute inset-0">
+        <!-- Slides Container -->
+        <div class="w-full h-full relative" id="hero-slider">
+            <!-- Slide 1 -->
+            <div class="absolute inset-0 transition-opacity duration-1000 opacity-100 slide">
+                <!-- Background Image -->
+                <div class="absolute inset-0 bg-cover bg-center"
+                    style="background-image: url('https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+                </div>
+                <!-- Overlay -->
+                <div class="absolute inset-0 bg-black/50"></div>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <!-- Content on Top -->
+    <div class="relative z-10 flex items-center justify-center h-full text-center px-6">
+        <div class="text-white max-w-3xl">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">Nordic Lanka</h1>
+            <p class="text-xl md:text-2xl mb-8">Aalborg's Premier Door-to-Door Cleaning Solutions</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#services"
+                    class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
+                    Our Services
+                </a>
+                <a href="#contact"
+                    class="bg-white hover:bg-gray-100 text-blue-700 font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript for Slide -->
+<script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.opacity = i === index ? '1' : '0';
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 5000);
+</script>
+
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 slide-in-left">
+                    <img src="https://pixabay.com/get/g204e087877ea94ffa7bcb87490b1267b6a1bcdca6a41d054004e6b15a83aa4a6464b42c8dada244f1b9c4970278b6fb8a1e818db08e64e32f381fd2ddc90cfef_1280.jpg" alt="Cleaning service" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2 slide-in-right">
+                    <h2 class="text-3xl font-bold mb-6 text-blue-900">About Us</h2>
+                    <p class="text-gray-700 text-lg mb-6">
+                        Nordic Lanka is a mobile service company based in Aalborg specializing in home and office cleaning as well as car detailing. We are trusted for our quality, reliability, and customer convenience.
+                    </p>
+                    <p class="text-gray-700 text-lg mb-6">
+                        Our team of experienced professionals brings the highest standards of Scandinavian quality and attention to detail to every project, ensuring your spaces are not just clean, but hygienically pristine.
+                    </p>
+                    <div class="flex flex-wrap gap-6 mt-8">
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-check text-blue-700 text-xl"></i>
+                            </div>
+                            <span class="text-gray-800 font-medium">Professional Team</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-blue-700 text-xl"></i>
+                            </div>
+                            <span class="text-gray-800 font-medium">Punctual Service</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-star text-blue-700 text-xl"></i>
+                            </div>
+                            <span class="text-gray-800 font-medium">Quality Results</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-blue-900 mb-4">Our Services</h2>
+                <p class="text-gray-700 text-lg max-w-3xl mx-auto">
+                    We offer comprehensive cleaning solutions tailored to your specific needs, ensuring your spaces shine with Nordic quality.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden fade-in">
+                    <img src="https://pixabay.com/get/g0485e3cecd78de935bdc2a671946e76e53b07bc04bcba2f6b47b0f76e1ada6c17a6be72247db21bf867111514ef66f595566192d84eb9d895558e4c3babb8aad_1280.jpg" alt="House Cleaning" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-blue-800">General Cleaning</h3>
+                        <p class="text-gray-700 mb-4">
+                            Our general cleaning service includes thorough vacuuming, dusting, mopping, and surface cleaning to keep your spaces fresh and hygienic.
+                        </p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Vacuuming all floors</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Dusting all surfaces</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Mopping floors</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Bathroom & kitchen cleaning</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden fade-in">
+                    <img src="https://pixabay.com/get/g4e131a168accbc65b4762ee447409d982355f5781b2056d9b86bbb72a90bd95724fcbe1f6ba549234116a0c0b045a93c293317286c6a582b40a0b9adeb5ed688_1280.jpg" alt="Deep Cleaning" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-blue-800">Deep Cleaning</h3>
+                        <p class="text-gray-700 mb-4">
+                            Thorough cleaning ideal for move-ins, post-stays, or long closures. Includes appliance cleaning and sanitizing.
+                        </p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Appliance interior cleaning</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Cabinet interiors</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Sanitizing kitchen & bathroom</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Complete disinfection</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden fade-in">
+                    <img src="https://pixabay.com/get/g61eb506bea833bd885410371ed0516f22b3cd35fa0f29961a622082c448e412ddc240acea4c192b80ed4657be3d375efc2cae6803f332f3bd56f7874b56ff514_1280.jpg" alt="Office Cleaning" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-blue-800">Office Cleaning</h3>
+                        <p class="text-gray-700 mb-4">
+                            Keep your business space professional and inviting with our tailored office cleaning services.
+                        </p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Workspace sanitization</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Kitchen & break area cleaning</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Meeting room preparation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Floor maintenance</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-blue-900 mb-4">Our Work Gallery</h2>
+                <p class="text-gray-700 text-lg max-w-3xl mx-auto">
+                    See the transformations we create through our professional cleaning services.
+                </p>
+            </div>
+            
+            <div class="relative overflow-hidden fade-in" id="gallery-slider">
+                <!-- Gallery container -->
+                <div class="flex transition-transform duration-500 ease-in-out" id="gallery-container">
+                    <!-- Gallery images -->
+                    <div class="min-w-full p-2">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Clean Living Room" class="w-full h-96 object-cover rounded-lg shadow-lg">
+                        <p class="text-center mt-3 text-lg font-medium">Living Room Transformation</p>
+                    </div>
+                    <div class="min-w-full p-2">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Kitchen Cleaning" class="w-full h-96 object-cover rounded-lg shadow-lg">
+                        <p class="text-center mt-3 text-lg font-medium">Kitchen Deep Cleaning</p>
+                    </div>
+                    <div class="min-w-full p-2">
+                        <img src="https://images.unsplash.com/photo-1595429035839-c99c298ffdde?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Bathroom Cleaning" class="w-full h-96 object-cover rounded-lg shadow-lg">
+                        <p class="text-center mt-3 text-lg font-medium">Bathroom Sanitization</p>
+                    </div>
+                    <div class="min-w-full p-2">
+                        <img src="https://images.unsplash.com/photo-1592928302636-c83cf1e1c887?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Car Detailing" class="w-full h-96 object-cover rounded-lg shadow-lg">
+                        <p class="text-center mt-3 text-lg font-medium">Professional Car Detailing</p>
+                    </div>
+                    <div class="min-w-full p-2">
+                        <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Office Cleaning" class="w-full h-96 object-cover rounded-lg shadow-lg">
+                        <p class="text-center mt-3 text-lg font-medium">Office Space Maintenance</p>
+                    </div>
+                </div>
+                
+                <!-- Navigation arrows -->
+                <button id="prev-btn" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-70 p-2 rounded-full shadow-md focus:outline-none hover:bg-opacity-100 transition">
+                    <i class="fas fa-chevron-left text-blue-900 text-xl"></i>
+                </button>
+                <button id="next-btn" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-70 p-2 rounded-full shadow-md focus:outline-none hover:bg-opacity-100 transition">
+                    <i class="fas fa-chevron-right text-blue-900 text-xl"></i>
+                </button>
+                
+                <!-- Indicators -->
+                <div class="flex justify-center mt-6" id="gallery-indicators">
+                    <button class="h-3 w-3 rounded-full bg-blue-300 mx-1 focus:outline-none gallery-indicator" data-index="0"></button>
+                    <button class="h-3 w-3 rounded-full bg-gray-300 mx-1 focus:outline-none gallery-indicator" data-index="1"></button>
+                    <button class="h-3 w-3 rounded-full bg-gray-300 mx-1 focus:outline-none gallery-indicator" data-index="2"></button>
+                    <button class="h-3 w-3 rounded-full bg-gray-300 mx-1 focus:outline-none gallery-indicator" data-index="3"></button>
+                    <button class="h-3 w-3 rounded-full bg-gray-300 mx-1 focus:outline-none gallery-indicator" data-index="4"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-blue-900 mb-4">Summer House Cleaning Charges</h2>
+                <p class="text-gray-700 text-lg max-w-3xl mx-auto">
+                    Transparent pricing with no hidden fees. All services include materials and transport.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Pricing Card 1 -->
+                <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:transform hover:scale-105 slide-in-left">
+                    <div class="bg-blue-800 text-white py-6 px-6 text-center">
+                        <h3 class="text-2xl font-bold">General Cleaning</h3>
+                    </div>
+                    <div class="p-8">
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span><strong>0–60 m²:</strong> 850 DKK</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span><strong>60–100 m²:</strong> 1200 DKK</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-clock text-blue-700 mr-2"></i>
+                                <span><strong>Duration:</strong> 4–6 hours</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-info-circle text-blue-700 mr-2"></i>
+                                <span>Includes all materials and transport</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block text-center bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg shadow-md transition duration-300 w-full">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Pricing Card 2 -->
+                <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:transform hover:scale-105 slide-in-right">
+                    <div class="bg-blue-900 text-white py-6 px-6 text-center">
+                        <h3 class="text-2xl font-bold">Deep Cleaning</h3>
+                    </div>
+                    <div class="p-8">
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span><strong>0–60 m²:</strong> 1500 DKK</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span><strong>100–150 m²:</strong> 2200 DKK</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-clock text-blue-700 mr-2"></i>
+                                <span><strong>Duration:</strong> 7–12 hours</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-info-circle text-blue-700 mr-2"></i>
+                                <span>Includes all materials and transport</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block text-center bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg shadow-md transition duration-300 w-full">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-blue-900 mb-4">Contact Us</h2>
+                <p class="text-gray-700 text-lg max-w-3xl mx-auto">
+                    Reach out to us for a free quote or to schedule your cleaning service.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Contact Info -->
+                <div class="slide-in-left">
+                    <div class="bg-blue-50 p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-6 text-blue-900">Our Details</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-blue-700 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-800">Address</h4>
+                                    <p class="text-gray-700">Herningvej 5A, 9220 Aalborg Øst</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone text-blue-700 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-800">Phone</h4>
+                                    <p class="text-gray-700">Chathura: +45 91 60 74 40</p>
+                                    <p class="text-gray-700">Ranga: +45 91 70 58 78</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-blue-700 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-800">Email</h4>
+                                    <p class="text-gray-700">nordiclankaservices@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-blue-700 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-800">Working Hours</h4>
+                                    <p class="text-gray-700">Monday - Friday: 8:00 AM - 6:00 PM</p>
+                                    <p class="text-gray-700">Saturday: 9:00 AM - 4:00 PM</p>
+                                    <p class="text-gray-700">Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <a href="https://wa.me/4591607440" class="whatsapp-button flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 w-full">
+                                <i class="fab fa-whatsapp text-xl mr-2"></i>
+                                Message on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="slide-in-right">
+                    <form class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-6 text-blue-900">Send Us a Message</h3>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2" for="name">
+                                Full Name
+                            </label>
+                            <input class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2" for="email">
+                                Email Address
+                            </label>
+                            <input class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2" for="phone">
+                                Phone Number
+                            </label>
+                            <input class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2" for="service">
+                                Service Interested In
+                            </label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="general">General Cleaning</option>
+                                <option value="deep">Deep Cleaning</option>
+                                <option value="office">Office Cleaning</option>
+                                <option value="car">Car Detailing</option>
+                                <option value="other">Other Services</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2" for="message">
+                                Message
+                            </label>
+                            <textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg shadow-md transition duration-300 w-full">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between mb-8">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">Nordic Lanka</h3>
+                    <p class="text-blue-200 max-w-xs">
+                        Professional cleaning services delivered with Scandinavian quality and Sri Lankan hospitality.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-blue-200 hover:text-white transition">Home</a></li>
+                            <li><a href="#about" class="text-blue-200 hover:text-white transition">About</a></li>
+                            <li><a href="#services" class="text-blue-200 hover:text-white transition">Services</a></li>
+                            <li><a href="#pricing" class="text-blue-200 hover:text-white transition">Pricing</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">Services</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#services" class="text-blue-200 hover:text-white transition">General Cleaning</a></li>
+                            <li><a href="#services" class="text-blue-200 hover:text-white transition">Deep Cleaning</a></li>
+                            <li><a href="#services" class="text-blue-200 hover:text-white transition">Office Cleaning</a></li>
+                            <li><a href="#services" class="text-blue-200 hover:text-white transition">Car Detailing</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-span-2 md:col-span-1">
+                        <h4 class="text-lg font-bold mb-4">Connect With Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-white bg-opacity-20 p-2 rounded-full hover:bg-opacity-30 transition">
+                                <i class="fab fa-facebook-f text-lg"></i>
+                            </a>
+                            <a href="#" class="bg-white bg-opacity-20 p-2 rounded-full hover:bg-opacity-30 transition">
+                                <i class="fab fa-instagram text-lg"></i>
+                            </a>
+                            <a href="#" class="bg-white bg-opacity-20 p-2 rounded-full hover:bg-opacity-30 transition">
+                                <i class="fab fa-linkedin-in text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-blue-800 text-center text-blue-200">
+                <p>&copy; 2025 Nordic Lanka. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

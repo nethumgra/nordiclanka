@@ -294,19 +294,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Optimized scroll handler
-    const optimizedScrollHandler = debounce(function() {
-        const currentScrollY = window.scrollY;
+    //const optimizedScrollHandler = debounce(function() {
+        //const currentScrollY = window.scrollY;
         
-        if (currentScrollY > 50) {
-            navbar.classList.add('bg-white/95', 'backdrop-blur-sm');
-        } else {
-            navbar.classList.remove('bg-white/95', 'backdrop-blur-sm');
-        }
-    }, 10);
+        //if (currentScrollY > 50) {
+       //     navbar.classList.add('bg-white/95', 'backdrop-blur-sm');
+        //} else {
+        //    navbar.classList.remove('bg-white/95', 'backdrop-blur-sm');
+       // }
+  //  }, 10);
 
-    window.addEventListener('scroll', optimizedScrollHandler);
+   // window.addEventListener('scroll', optimizedScrollHandler);
 
-    console.log('Nordic Lanka website initialized successfully!');
+  //  console.log('Nordic Lanka website initialized successfully!');
 });
 
 // Add CSS for ripple effect

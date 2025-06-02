@@ -63,10 +63,10 @@
 </head>
 <body class="font-sans antialiased bg-gray-50">
 <!-- Announcement Bar -->
-<div id="announcement-bar" class="bg-nordic-teal-600 text-white text-center py-2 px-4 text-sm font-medium flex justify-center items-center gap-6">
+<div id="announcement-bar" class="bg-nordic-teal-600 text-white text-center py-2 px-4 text-sm font-medium flex flex-wrap justify-center items-center gap-6">
 
-  <!-- Social Media Icons -->
-  <div class="flex items-center gap-3">
+  <!-- Social Media Icons (Hidden on mobile) -->
+  <div class="hidden sm:flex items-center gap-3">
     <a href="https://facebook.com/yourpage" target="_blank" class="hover:text-nordic-teal-100" aria-label="Facebook">
       <i class="fab fa-facebook-f"></i>
     </a>
@@ -78,20 +78,20 @@
     </a>
   </div>
 
-  <!-- Announcement Text with Book Now Link -->
-  <div class="flex items-center gap-2">
-   Book now and get 10% off your first car detailing service!
-    <a href="#booking" class="underline hover:text-nordic-teal-100 ml-1">Book Now</a>
+  <!-- Announcement Text (Visible on all devices, no "Book Now" button on mobile) -->
+  <div class="flex flex-wrap items-center gap-2 text-sm sm:text-base">
+    <span>Book now and get 10% off your first car detailing service!</span>
+    <a href="#booking" class="hidden sm:inline underline hover:text-nordic-teal-100 ml-1">Book Now</a>
   </div>
 
-  <!-- Phone Number -->
-  <div class="flex items-center gap-1">
+  <!-- Phone Number (Hidden on mobile) -->
+  <div class="hidden sm:flex items-center gap-1">
     <i class="fas fa-phone-alt"></i>
     <span>+1 (555) 123-4567</span>
   </div>
 
-  <!-- Close Button -->
-  <button onclick="document.getElementById('announcement-bar').style.display='none'" class="text-white hover:text-gray-200">
+  <!-- Close Button (Hidden on mobile) -->
+  <button onclick="document.getElementById('announcement-bar').style.display='none'" class="hidden sm:block text-white hover:text-gray-200">
     <i class="fas fa-times"></i>
   </button>
 

@@ -193,3 +193,21 @@ textarea:focus {
         line-height: 1.4;
     }
 }
+/* Ensure the images in Swiper are responsive */
+.swiper-slide img {
+  width: 100%; /* Make images take up the full width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image is correctly scaled */
+}
+
+/* Add responsiveness for smaller screen sizes */
+@media (max-width: 640px) {
+  .swiper {
+    width: 100%; /* Make the Swiper take full width on mobile */
+    height: 50vw; /* Make the height proportional to the viewport width */
+  }
+
+  .swiper-slide {
+    height: 100%; /* Ensure each slide takes the full height */
+  }
+}

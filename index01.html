@@ -236,26 +236,12 @@
 </section>
 
 
-  <!-- MODALS -->
+<!-- MODAL: CAR -->
 <div id="modal-car" class="modal hidden fixed inset-0 bg-black/60 flex justify-center items-center z-50">
   <div class="bg-white rounded-2xl w-full max-w-xl p-6 relative transform transition-all duration-300 scale-95 hover:scale-100 shadow-xl">
     <button onclick="closeModal('car')" class="absolute top-3 right-3 text-gray-500 hover:text-black text-2xl">&times;</button>
-    
-    <div class="swiper mb-4 rounded-xl overflow-hidden h-64 w-full aspect-square shadow-md">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide h-full">
-          <img src="img/g4.jpg" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
-        </div>
-        <div class="swiper-slide h-full">
-          <img src="img/g6.jpg" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
-        </div>
-        <div class="swiper-slide h-full">
-          <img src="img/g10.jpg" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
-        </div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
 
+    <!-- Removed image box -->
 
     <!-- Content -->
     <h3 class="text-xl font-bold mb-2">Mobile Car Detailing in Aalborg</h3>
@@ -285,24 +271,13 @@
   </div>
 </div>
 
+
+<!-- MODAL: HOME -->
 <div id="modal-home" class="modal hidden fixed inset-0 bg-black/60 flex justify-center items-center z-50">
   <div class="bg-white rounded-2xl w-full max-w-xl p-6 relative transform transition-all duration-300 scale-95 hover:scale-100 shadow-xl">
     <button onclick="closeModal('home')" class="absolute top-3 right-3 text-gray-500 hover:text-black text-2xl">&times;</button>
 
-    <div class="swiper mb-4 rounded-xl overflow-hidden h-64 w-full aspect-square shadow-md">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide h-full">
-          <img src="img/g8.jpg" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
-        </div>
-        <div class="swiper-slide h-full">
-          <img src="img/g11.jpg" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
-        </div>
-        <div class="swiper-slide h-full">
-          <img src="img/g12.jpg" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
-        </div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
+    <!-- Removed image box -->
 
     <!-- Content -->
     <h3 class="text-xl font-bold mb-2">Professional Office Cleaning in Aalborg</h3>
@@ -331,6 +306,7 @@
     </a>
   </div>
 </div>
+
 
 <script>
   // Initialize Swiper for car modal with faster slide transition and quicker auto-slide
@@ -464,10 +440,12 @@ function closeModal(modalId) {
 
 
 
+
+
 <!-- Our Achievements Section -->
 <section class="bg-[#f0fdfa] py-20">
   <div class="max-w-7xl mx-auto px-4 text-center">
-   <h2 class="text-4xl font-bold text-nordic-teal-800 mb-4">Our Achievements</h2>
+    <h2 class="text-4xl font-bold text-nordic-teal-800 mb-4">Our Achievements</h2>
 
     <p class="text-gray-600 max-w-2xl mx-auto mb-12">
       We've cleaned countless homes and offices, leaving our clients happy and their spaces sparkling. We are committed to providing top-quality cleaning services.
@@ -476,32 +454,33 @@ function closeModal(modalId) {
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
 
       <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all flex flex-col items-center justify-center">
-        <div class="text-6xl text-orange-500 mb-4">
+        <div class="text-6xl text-nordic-teal-800 mb-4">
           <i class="fas fa-check-circle"></i>
         </div>
-        <p class="text-5xl font-bold text-orange-500 counter" data-count="500">0</p>
+        <p class="text-5xl font-bold text-nordic-teal-800 counter" data-count="500">0</p>
         <p class="mt-2 text-gray-700 font-medium text-lg">Projects Completed</p>
       </div>
 
       <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all flex flex-col items-center justify-center">
-        <div class="text-6xl text-blue-500 mb-4">
+        <div class="text-6xl text-nordic-teal-800 mb-4">
           <i class="fas fa-users"></i>
         </div>
-        <p class="text-5xl font-bold text-blue-500 counter" data-count="450">0</p>
+        <p class="text-5xl font-bold text-nordic-teal-800 counter" data-count="450">0</p>
         <p class="mt-2 text-gray-700 font-medium text-lg">Satisfied Clients</p>
       </div>
 
       <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all flex flex-col items-center justify-center">
-        <div class="text-6xl text-red-500 mb-4">
+        <div class="text-6xl text-nordic-teal-800 mb-4">
           <i class="fas fa-user-tie"></i>
         </div>
-        <p class="text-5xl font-bold text-red-500 counter" data-count="25">0</p>
+        <p class="text-5xl font-bold text-nordic-teal-800 counter" data-count="25">0</p>
         <p class="mt-2 text-gray-700 font-medium text-lg">Team Members</p>
       </div>
 
     </div>
   </div>
 </section>
+
 
 <!-- Add Font Awesome CDN for Icons (place in <head>) -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
